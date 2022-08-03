@@ -3,22 +3,27 @@ import PySimpleGUI as sg
 
 
 
+sg.theme('Dark')
+sg.set_options(font = 'Impact 20', button_element_size = (5,2))
+button_size = (5,2)
 
-layout = [[sg.Text('Output')],
+
+layout = [[sg.Text('Output', font = 'Broadway 30', justification ='right', expand_x= True)],
 
 
-[sg.Button('Enter'), sg.Button(' Clear')],
+[sg.Button('Enter', expand_x = True), sg.Button('Clear', expand_x = True)],
 
-[sg.Button(7), sg.Button(8), sg.Button(9), sg.Button('/')],
+[sg.Button(7, size = button_size), sg.Button(8, size = button_size), sg.Button(9, size = button_size), sg.Button('/', size = button_size)],
 
-[sg.Button(4), sg.Button(5), sg.Button(6), sg.Button('*')],
+[sg.Button(4, size = button_size), sg.Button(5, size = button_size), sg.Button(6, size = button_size), sg.Button('*', size = button_size)],
 
-[sg.Button(1), sg.Button(2), sg.Button(3), sg.Button('-')],
+[sg.Button(1, size = button_size), sg.Button(2, size = button_size), sg.Button(3, size = button_size), sg.Button('-', size = button_size)],
 
-[sg.Button(0), sg.Button('.'), sg.Button('+')]
+[sg.Button(0, expand_x = True), sg.Button('.', size = button_size), sg.Button('+', size = button_size)]
 
 
 ]
+
 
 window = sg.Window('Calculator', layout)
 
